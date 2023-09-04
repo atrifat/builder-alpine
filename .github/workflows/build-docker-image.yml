@@ -19,7 +19,6 @@ jobs:
           docker build -t $IMAGE_ID .
 
       - name: Log into Container Registry
-        if: ${{ secrets.GITHUB_TOKEN }}
         uses: docker/login-action@28218f9b04b4f3f62068d7b6ce6ca5b26e35336c
         with:
           registry: ${{ env.REGISTRY }}
